@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textView,textView2,textView3;
+    TextView textView,textView2,textView3,title;
     ImageButton imageButton,imageButton2,imageButton3;
     int n1=0;
     int n2=0;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        title = (TextView) findViewById(R.id.mainTitle);
         textView = (TextView) findViewById(R.id.textView);
         textView2 = (TextView)findViewById(R.id.textView2);
         textView3 = (TextView)findViewById(R.id.textView3);
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 n1 += 1;
                 textView.setText("Selected "+String.valueOf(n1)+" times");
+                title.setText("Hi");
 
             }
         });
